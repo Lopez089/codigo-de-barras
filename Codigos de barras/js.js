@@ -26,7 +26,7 @@ if (CbarraE == Cbarra ) {
 	
 	var SiNo = prompt("Puedes registrar otro producto ¿Si / No?")
 
-	if (SiNo == si) {
+	if (SiNo == "si") {
 		ejecucion();
 	}else {
 		alert("Gracia por usarlo");
