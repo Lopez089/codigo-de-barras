@@ -1,7 +1,7 @@
-// referencia registrada
 
-var CbarraE = 4949;
-var refE = "febi3456";
+var CbarraE = 3223
+var refE = 3434
+
 
 ejecucion();
 
@@ -23,7 +23,18 @@ if (CbarraE == Cbarra ) {
 
 	alert("El codigo de barras esta registrado");
 	alert("Codigo de barras: " + Cbarra + " REF: " + ref );
+
+	GuardarLocal()
+
+	function GuardarLocal() {
 	
+	let producto ={
+		CodigoDeBarra: Cbarra ,
+		Ref: ref,
+	};
+
+	localStorage.setItem("producto", JSON.stringify(producto));
+}
 	var SiNo = prompt("Puedes registrar otro producto ¿Si / No?")
 
 	if (SiNo == "si") {
@@ -32,6 +43,7 @@ if (CbarraE == Cbarra ) {
 		alert("Gracia por usarlo");
 	}
 	
+
 
 };
 
