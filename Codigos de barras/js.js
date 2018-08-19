@@ -1,8 +1,3 @@
-
-var CbarraE = 3223
-var refE = 3434
-
-
 ejecucion();
 
 function ejecucion () {
@@ -11,9 +6,15 @@ function ejecucion () {
 var Cbarra = prompt("INTRODUCIR CODIGO DE BARRA");
 var ref = prompt("INTRODUCIR REF.");
 
-if (CbarraE == Cbarra ) {
+var buscarCbarra = localStorage.getItem(Cbarra);
+var buscarRef = localStorage.getItem(ref);
+
+console.log(buscarCbarra)
+console.log(buscarRef)
+
+if (Cbarra = buscarCbarra ) {
 	alert("El codigo de barras es correcto")
-}if (refE == ref) {
+}if(ref = buscarRef) {
 	alert("La referencia en correcta")
 } else {
 	alert("EL CODIGO DE BARRA NO PERTENECE A NINGUN ARTICULO INTRODUZCA LA REFERENCIA  A MANO");
@@ -37,10 +38,6 @@ if (CbarraE == Cbarra ) {
 	productoList.push(producto);
 
 	localStorage.setItem(producto.Ref, JSON.stringify(producto));
-
-for (i = 0; i < 10; i++) {
-
-}
 
 }
 	var SiNo = prompt("Puedes registrar otro producto ¿Si / No?")
