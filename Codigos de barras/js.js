@@ -18,6 +18,8 @@ if (CbarraE == Cbarra ) {
 } else {
 	alert("EL CODIGO DE BARRA NO PERTENECE A NINGUN ARTICULO INTRODUZCA LA REFERENCIA  A MANO");
 
+	var productoList = []
+
 	var Cbarra = prompt("INTRODUCIR CODIGO DE BARRA");
 	var ref = prompt("INTRODUCIR REF.");
 
@@ -27,13 +29,19 @@ if (CbarraE == Cbarra ) {
 	GuardarLocal()
 
 	function GuardarLocal() {
-	
-	let producto ={
-		CodigoDeBarra: Cbarra ,
+    
+	let producto={
+		CodigoDeBarra: Cbarra,
 		Ref: ref,
 	};
+	productoList.push(producto);
 
-	localStorage.setItem("producto", JSON.stringify(producto));
+	localStorage.setItem(producto.Ref, JSON.stringify(producto));
+
+for (i = 0; i < 10; i++) {
+
+}
+
 }
 	var SiNo = prompt("Puedes registrar otro producto ¿Si / No?")
 
@@ -46,5 +54,4 @@ if (CbarraE == Cbarra ) {
 
 
 };
-
 }
